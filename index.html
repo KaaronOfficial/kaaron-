@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sleep & Mood AI Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <h1>Sleep & Mood AI 🌙</h1>
+
+  <!-- Login -->
+  <div id="login">
+    <input id="username" placeholder="Enter Username">
+    <input id="password" type="password" placeholder="Enter Password">
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="logIn()">Log In</button>
+    <p id="loginMsg" style="color:red;"></p>
+  </div>
+
+  <!-- Chat app -->
+  <div id="app" class="hidden">
+    <div id="chatBox">
+      <div id="messages"></div>
+    </div>
+
+    <input type="text" id="userInput" placeholder="Type your message..." disabled>
+    <button id="submitBtn" onclick="submitAnswer()" disabled>Send</button>
+
+    <canvas id="chart"></canvas>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
